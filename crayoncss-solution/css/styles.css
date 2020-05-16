@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float three columns side by side */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  p {
+    padding: 30px;
+    word-break: break-all;
+    white-space: normal;
+  }
+
+  /* Common property to labels */
+  
+  .common-label {
+    float: right;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    font-size: x-large;
+    padding: 5px;
+  }
+
+  /* Background color based on IDs of each card */
+
+  .chicken {
+    background-color: red;
+  }
+
+  .beef {
+      background-color: rosybrown;
+  }
+
+  .sushi {
+      background-color: skyblue;
+  }
+
+  h1{
+      text-align: center;
+  }
+  
+  /* Responsive columns for Tab and Mobile Device*/
+  @media screen and (max-width: 991px) {
+    #one, #two {
+      width: 50%;
+      display: block;
+      margin-bottom: 20px;
+    }
+    #three {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    #one, #two, #three {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #f1f1f1;
+    border: 1px solid;
+  }
